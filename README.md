@@ -2,17 +2,17 @@
 
 ## Project setup
 ```
-yarn install
+yarn
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn run dev:mp-weixin
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+yarn run build:mp-weixin
 ```
 
 ### Run your tests
