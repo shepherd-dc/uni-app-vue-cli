@@ -3,26 +3,30 @@
     <view class="section">
       <view class="section__title">vertical scroll</view>
       <scroll-view
+        :scroll-into-view="toView"
+        :scroll-top="scrollTop"
         scroll-y
         style="height: 400px;"
         @crolltoupper="upper"
         @scrolltolower="lower"
         @scroll="scroll"
-        :scroll-into-view="toView"
-        :scroll-top="scrollTop"
       >
         <view
           v-for="item in order"
-          :key="item"
           :id="item"
+          :key="item"
           :class="['scroll-view-item', 'bc_'+item]"
           @tap="navigateToDetail(item)"
         ></view>
       </scroll-view>
 
       <view class="btn-area">
-        <button size="mini" @tap="tap">click me to scroll into view</button>
-        <button size="mini" @tap="tapMove">click me to scroll</button>
+        <button
+          size="mini"
+          @tap="tap">click me to scroll into view</button>
+        <button
+          size="mini"
+          @tap="tapMove">click me to scroll</button>
       </view>
     </view>
   </view>
